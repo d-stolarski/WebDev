@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title></title>
+</head>
+<style>
+	* {
+		margin: 0; padding: 0;
+	}	
+	
+	#dark, #button, #room {
+		position: absolute;
+	}
+	
+	#room {
+		width: 100vw;
+		height: 100vh;
+		background-image: url(bmw.jpg);
+		background-size:cover;
+		background-position: center;
+		z-index: 1;
+	}
+	
+	#dark {
+		width: 100vw;
+		height: 100vh;
+		background-color: black;
+		z-index: 2;
+		transition: all 1s ease;
+	}
+	
+	#button {
+		background-image: url("BMW-logo-2.jpg");
+		background-size: 120px 100px;
+		background-repeat: no-repeat;
+		width: 120px;
+		height: 100px;
+		z-index: 3;
+		box-sizing: border-box;
+		top: 30px;
+		left: 30px;
+		animation-name: nazwaAnimacji;
+		animation-duration: 6s;
+	}
+	
+	
+	#button:hover + #dark {
+		background-color: transparent;
+	}
+	
+	@keyframes nazwaAnimacji {
+		0%   {background-color:red; left:30px; top:30px;
+		opacity: 0.25;}
+    25%  {background-color:yellow; left:500px; top:500px;}
+    50%  {background-color:blue; left:200px; top:200px;
+		opacity: 0.5;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:30px; top:30px;
+		opacity: 1;}
+	}
+</style>
+<body>
+		<div id="room"></div>
+		<div id="button"></div>
+		<div id="dark"></div>	
+</body>
+</html>
