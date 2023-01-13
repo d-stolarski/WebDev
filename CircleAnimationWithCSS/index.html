@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Animacja w transition i wstęp do jQuery</title>
+			<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+		<div class='circle'></div>	
+<button>Zakręć</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$('button').on('click', function(){
+		$('.circle').toggleClass('active');
+		console.log('jest ok');
+	})
+	</script>
+</body>
+</html>
